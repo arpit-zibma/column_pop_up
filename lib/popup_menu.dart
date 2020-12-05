@@ -470,6 +470,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
     } else {
       // only text
       return Container(
+        height: 22.0,
         child: Center(
           child: Material(
             color: Colors.transparent,
