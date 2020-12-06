@@ -483,6 +483,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                     child: Center(
                       child: Text(
                         widget.item.menuTitle,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 10,
                             color: Colors.white),
