@@ -44,7 +44,7 @@ typedef MenuClickCallback = Function(MenuItemProvider item);
 typedef PopupMenuStateChanged = Function(bool isShow);
 
 class PopupMenu {
-  static var itemWidth = MediaQuery.of(context).size.height*0.1;
+  static var itemWidth = MediaQuery.of(context).size.height*0.2;
   static var itemHeight = MediaQuery.of(context).size.width*0.06;
   static var arrowHeight = 10.0;
   OverlayEntry _entry;
@@ -217,6 +217,7 @@ class PopupMenu {
               left: offset.dx,
               top: offset.dy,
               child: Container(
+                padding: EdgeInsets.all(8),
                 width: menuWidth(),
                 height: menuHeight(),
                 child: Column(
@@ -430,21 +431,18 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
           widget.clickCallback(widget.item);
         }
       },
-      child: Padding(
-        padding: EdgeInsets.all(8),
-        child: Container(
-            width: PopupMenu.itemWidth,
-            height: PopupMenu.itemHeight,
-            // decoration: BoxDecoration(
-            //     color: color,
-            //     border: Border(
-            //         right: BorderSide(
-            //             color: widget.showLine
-            //                 ? widget.lineColor
-            //                 : Colors.transparent)),
-            // ),
-            child: _createContent()),
-      ),
+      child: Container(
+          width: PopupMenu.itemWidth,
+          height: PopupMenu.itemHeight,
+          // decoration: BoxDecoration(
+          //     color: color,
+          //     border: Border(
+          //         right: BorderSide(
+          //             color: widget.showLine
+          //                 ? widget.lineColor
+          //                 : Colors.transparent)),
+          // ),
+          child: _createContent()),
     );
   }
 
