@@ -473,8 +473,8 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       return Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 70,
-               width: 90,
+              height: 50,
+               width: 70,
                child: DecoratedBox(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
