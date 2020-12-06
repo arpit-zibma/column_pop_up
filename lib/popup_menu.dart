@@ -485,6 +485,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                         widget.item.menuTitle,
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          fontSize: 10,
                             color: Colors.white),
                       ),
                     ),
