@@ -251,7 +251,6 @@ class PopupMenu {
       Color color =
           (i < _row - 1 && _row != 1) ? _lineColor : Colors.transparent;
       Widget rowWidget = Container(
-        padding: EdgeInsets.all(8),
         // decoration:
             // BoxDecoration(border: Border(bottom: BorderSide(color: color))),
         height: itemHeight,
@@ -431,21 +430,18 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
           widget.clickCallback(widget.item);
         }
       },
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Container(
-            width: PopupMenu.itemWidth,
-            height: PopupMenu.itemHeight,
-            // decoration: BoxDecoration(
-            //     color: color,
-            //     border: Border(
-            //         right: BorderSide(
-            //             color: widget.showLine
-            //                 ? widget.lineColor
-            //                 : Colors.transparent)),
-            // ),
-            child: _createContent()),
-      ),
+      child: Container(
+          width: PopupMenu.itemWidth,
+          height: PopupMenu.itemHeight,
+          // decoration: BoxDecoration(
+          //     color: color,
+          //     border: Border(
+          //         right: BorderSide(
+          //             color: widget.showLine
+          //                 ? widget.lineColor
+          //                 : Colors.transparent)),
+          // ),
+          child: _createContent()),
     );
   }
 
@@ -474,22 +470,27 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       );
     } else {
       // only text
-      return Container(
-             child: DecoratedBox(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.orange.withOpacity(0.8),
-                ),
-                  child: Center(
-                    child: Text(
-                      widget.item.menuTitle,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white),
-                    ),
+      return Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 50,
+                width: 50,
+               child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.orange.withOpacity(0.8),
                   ),
-                  )
-    );
+                    child: Center(
+                      child: Text(
+                        widget.item.menuTitle,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white),
+                      ),
+                    ),
+                    )
+    ),
+      );
       //   Container(
       //   child: Center(
       //     child: Material(
