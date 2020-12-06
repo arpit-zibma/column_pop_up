@@ -44,8 +44,8 @@ typedef MenuClickCallback = Function(MenuItemProvider item);
 typedef PopupMenuStateChanged = Function(bool isShow);
 
 class PopupMenu {
-  static var itemWidth = 72.0;
-  static var itemHeight = 65.0;
+  static var itemWidth = MediaQuery.of(context).size.height*0.08;
+  static var itemHeight = MediaQuery.of(context).size.width*0.06;
   static var arrowHeight = 10.0;
   OverlayEntry _entry;
   List<MenuItemProvider> items;
@@ -251,8 +251,8 @@ class PopupMenu {
       Color color =
           (i < _row - 1 && _row != 1) ? _lineColor : Colors.transparent;
       Widget rowWidget = Container(
-        decoration:
-            BoxDecoration(border: Border(bottom: BorderSide(color: color))),
+        // decoration:
+            // BoxDecoration(border: Border(bottom: BorderSide(color: color))),
         height: itemHeight,
         child: Row(
           children: _createRowItems(i),
@@ -471,19 +471,33 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
     } else {
       // only text
       return Container(
-        width: MediaQuery.of(context).size.height*0.1,
-        height: MediaQuery.of(context).size.width*0.1,
-        child: Center(
-          child: Material(
-            color: Colors.transparent,
-            child: Text(
-              widget.item.menuTitle,
-              style: widget.item.menuTextStyle,
-              textAlign: widget.item.menuTextAlign,
-            ),
-          ),
-        ),
-      );
+             child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.orange.withOpacity(0.8),
+                ),
+                  child: Center(
+                    child: Text(
+                      widget.item.menuTitle,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white),
+                    ),
+                  ),
+              ),
+    );
+      //   Container(
+      //   child: Center(
+      //     child: Material(
+      //       color: Colors.transparent,
+      //       child: Text(
+      //         widget.item.menuTitle,
+      //         style: widget.item.menuTextStyle,
+      //         textAlign: widget.item.menuTextAlign,
+      //       ),
+      //     ),
+      //   ),
+      // );
     }
   }
 }
