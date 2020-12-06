@@ -217,7 +217,6 @@ class PopupMenu {
               left: offset.dx,
               top: offset.dy,
               child: Container(
-                padding: EdgeInsets.all(8),
                 width: menuWidth(),
                 height: menuHeight(),
                 child: Column(
@@ -252,6 +251,7 @@ class PopupMenu {
       Color color =
           (i < _row - 1 && _row != 1) ? _lineColor : Colors.transparent;
       Widget rowWidget = Container(
+        padding: EdgeInsets.all(8),
         // decoration:
             // BoxDecoration(border: Border(bottom: BorderSide(color: color))),
         height: itemHeight,
