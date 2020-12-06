@@ -485,7 +485,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                         widget.item.menuTitle,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontSize: 10,
+                          fontSize: 12,
                             color: Colors.white),
                       ),
                     ),
