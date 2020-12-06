@@ -471,11 +471,14 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
     } else {
       // only text
       return Container(
+        padding:EdgeInsets.fromLTRB(MediaQuery.of(context).size.height*0.012,MediaQuery.of(context).size.height*0.015,0,MediaQuery.of(context).size.height*0.015),
              child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.orange.withOpacity(0.8),
                 ),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.height*0.038,MediaQuery.of(context).size.height*0.03,MediaQuery.of(context).size.height*0.038,MediaQuery.of(context).size.height*0.03),
                   child: Center(
                     child: Text(
                       widget.item.menuTitle,
@@ -484,6 +487,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                           color: Colors.white),
                     ),
                   ),
+                  )
               ),
     );
       //   Container(
