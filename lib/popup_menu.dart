@@ -433,13 +433,14 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       child: Container(
           width: PopupMenu.itemWidth,
           height: PopupMenu.itemHeight,
-          decoration: BoxDecoration(
-              color: color,
-              border: Border(
-                  right: BorderSide(
-                      color: widget.showLine
-                          ? widget.lineColor
-                          : Colors.transparent))),
+          // decoration: BoxDecoration(
+          //     color: color,
+          //     border: Border(
+          //         right: BorderSide(
+          //             color: widget.showLine
+          //                 ? widget.lineColor
+          //                 : Colors.transparent)),
+          // ),
           child: _createContent()),
     );
   }
@@ -470,7 +471,8 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
     } else {
       // only text
       return Container(
-        height: 22.0,
+        width: MediaQuery.of(context).size.height*0.1,
+        height: MediaQuery.of(context).size.width*0.1,
         child: Center(
           child: Material(
             color: Colors.transparent,
