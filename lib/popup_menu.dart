@@ -430,18 +430,21 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
           widget.clickCallback(widget.item);
         }
       },
-      child: Container(
-          width: PopupMenu.itemWidth,
-          height: PopupMenu.itemHeight,
-          // decoration: BoxDecoration(
-          //     color: color,
-          //     border: Border(
-          //         right: BorderSide(
-          //             color: widget.showLine
-          //                 ? widget.lineColor
-          //                 : Colors.transparent)),
-          // ),
-          child: _createContent()),
+      child: Padding(
+        padding: EdgeInsets.all(8),
+        child: Container(
+            width: PopupMenu.itemWidth,
+            height: PopupMenu.itemHeight,
+            // decoration: BoxDecoration(
+            //     color: color,
+            //     border: Border(
+            //         right: BorderSide(
+            //             color: widget.showLine
+            //                 ? widget.lineColor
+            //                 : Colors.transparent)),
+            // ),
+            child: _createContent()),
+      ),
     );
   }
 
@@ -470,25 +473,22 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       );
     } else {
       // only text
-      return Padding(
-        padding: EdgeInsets.all(8),
-        child: Container(
-               child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.orange.withOpacity(0.8),
-                  ),
-                    child: Center(
-                      child: Text(
-                        widget.item.menuTitle,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white),
-                      ),
+      return Container(
+             child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.orange.withOpacity(0.8),
+                ),
+                  child: Center(
+                    child: Text(
+                      widget.item.menuTitle,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white),
                     ),
-                    )
-    ),
-      );
+                  ),
+                  )
+    );
       //   Container(
       //   child: Center(
       //     child: Material(
