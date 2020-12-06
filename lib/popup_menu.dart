@@ -470,9 +470,9 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       );
     } else {
       // only text
-      return Padding(
-          padding:EdgeInsets.fromLTRB(MediaQuery.of(context).size.height*0.012,MediaQuery.of(context).size.height*0.015,0,MediaQuery.of(context).size.height*0.015),
-          child: Container(
+      return Container(
+            height: MediaQuery.of(context).size.height*0.1,
+            width: MediaQuery.of(context).size.width*0.15,
              child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -486,8 +486,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                           color: Colors.white),
                     ),
                   ),
-                  ),
-        )
+                  )
     );
       //   Container(
       //   child: Center(
