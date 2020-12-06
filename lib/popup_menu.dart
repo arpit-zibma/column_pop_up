@@ -470,24 +470,25 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
       );
     } else {
       // only text
-      return Container(
-            height: MediaQuery.of(context).size.height*0.1,
-            width: MediaQuery.of(context).size.width*0.15,
-             child: DecoratedBox(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.orange.withOpacity(0.8),
-                ),
-                  child: Center(
-                    child: Text(
-                      widget.item.menuTitle,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white),
-                    ),
+      return Padding(
+        padding: EdgeInsets.all(8),
+        child: Container(
+               child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.orange.withOpacity(0.8),
                   ),
-                  )
-    );
+                    child: Center(
+                      child: Text(
+                        widget.item.menuTitle,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white),
+                      ),
+                    ),
+                    )
+    ),
+      );
       //   Container(
       //   child: Center(
       //     child: Material(
