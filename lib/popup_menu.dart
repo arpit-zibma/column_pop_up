@@ -184,7 +184,7 @@ class PopupMenu {
   LayoutBuilder buildPopupMenuLayout(Offset offset) {
     return LayoutBuilder(builder: (context, constraints) {
       return BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 5,sigmaY: 5),
+        filter: ImageFilter.blur(sigmaX: 1.5,sigmaY: 1.5),
         child: GestureDetector(
           behavior: HitTestBehavior.translucent,
           onTap: () {
