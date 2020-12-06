@@ -184,7 +184,7 @@ class PopupMenu {
   LayoutBuilder buildPopupMenuLayout(Offset offset) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.black26,
         body: GestureDetector(
           behavior: HitTestBehavior.translucent,
           onTap: () {
