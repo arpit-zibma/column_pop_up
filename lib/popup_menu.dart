@@ -486,6 +486,7 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 12,
+                            decoration: TextDecoration.none,
                             color: Colors.white),
                       ),
                     ),
