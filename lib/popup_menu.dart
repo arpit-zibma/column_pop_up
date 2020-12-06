@@ -431,18 +431,21 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
           widget.clickCallback(widget.item);
         }
       },
-      child: Container(
-          width: PopupMenu.itemWidth,
-          height: PopupMenu.itemHeight,
-          // decoration: BoxDecoration(
-          //     color: color,
-          //     border: Border(
-          //         right: BorderSide(
-          //             color: widget.showLine
-          //                 ? widget.lineColor
-          //                 : Colors.transparent)),
-          // ),
-          child: _createContent()),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Container(
+            width: PopupMenu.itemWidth,
+            height: PopupMenu.itemHeight,
+            // decoration: BoxDecoration(
+            //     color: color,
+            //     border: Border(
+            //         right: BorderSide(
+            //             color: widget.showLine
+            //                 ? widget.lineColor
+            //                 : Colors.transparent)),
+            // ),
+            child: _createContent()),
+      ),
     );
   }
 
