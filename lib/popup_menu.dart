@@ -183,9 +183,9 @@ class PopupMenu {
 
   LayoutBuilder buildPopupMenuLayout(Offset offset) {
     return LayoutBuilder(builder: (context, constraints) {
-      return BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 0.5,sigmaY: 0.5),
-        child: GestureDetector(
+      return Scaffold(
+        backgroundColor: Colors.black12,
+        body: GestureDetector(
           behavior: HitTestBehavior.translucent,
           onTap: () {
             dismiss();
