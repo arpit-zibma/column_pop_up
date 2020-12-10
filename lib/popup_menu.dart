@@ -487,27 +487,12 @@ class _MenuItemWidgetState extends State<_MenuItemWidget> {
                       child: Text(
                         widget.item.menuTitle,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 12,
-                            decoration: TextDecoration.none,
-                            color: Colors.white),
+                        style: widget.item.menuTextStyle,
                       ),
                     ),
                     )
     ),
       );
-      //   Container(
-      //   child: Center(
-      //     child: Material(
-      //       color: Colors.transparent,
-      //       child: Text(
-      //         widget.item.menuTitle,
-      //         style: widget.item.menuTextStyle,
-      //         textAlign: widget.item.menuTextAlign,
-      //       ),
-      //     ),
-      //   ),
-      // );
     }
   }
 }
