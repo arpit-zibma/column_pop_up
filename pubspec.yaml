@@ -1,4 +1,4 @@
-name: popup_menu
+name: column_pop_up
 description: A Flutter popup menu.Writted with pure dart, supported both iOS and Android.
 version: 1.0.5
 author: chinabrant <sjwu1234@gmail.com>
